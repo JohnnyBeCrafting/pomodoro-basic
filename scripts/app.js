@@ -11,6 +11,7 @@ function init() {
     function onload(){
         numTimes++;
         let intervalID = setInterval(showTime, 1000);
+        console.log('intervalID yo', intervalID);
         function showTime(){
             if(!timerOn){
                 if(numTimes === 1){
