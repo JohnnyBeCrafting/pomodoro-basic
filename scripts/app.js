@@ -11,7 +11,6 @@ function init() {
     function onload(){
         numTimes++;
         let intervalID = setInterval(showTime, 1000);
-        console.log('intervalID yo', intervalID);
         function showTime(){
             if(!timerOn){
                 if(numTimes === 1){
@@ -21,6 +20,7 @@ function init() {
                     let secCount = initTime % 60;
                     let outputTime = `${minCount} : ${secCount < 10 ? "0" + secCount : secCount}`;
                     clockOutput.textContent = outputTime;
+                    document.title = outputTime;
                     initTime--;
                     if (initTime === 0) {
                         console.log("ding");
@@ -31,6 +31,7 @@ function init() {
                     let minCount = Math.floor(initTime / 60);
                     let secCount = initTime % 60; 
                     let outputTime = `${minCount} : ${secCount < 10 ? "0" + secCount : secCount}`;
+                    document.title = outputTime;
                     clockOutput.textContent = outputTime;
                     initTime--;
                     if (initTime === 0) {
