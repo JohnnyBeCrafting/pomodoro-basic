@@ -4,11 +4,14 @@ function init() {
     let startBtn = document.getElementById("start");
     let stopBtn = document.getElementById("stop");
     let resetBtn = document.getElementById("reset");
-    let initTime = 1500; 
-    let initMsg = `Work for 25 minutes, then take a break for 5 minutes. DO ITTT`;
+    let initTime = 10; 
+    let initMsg = `I've always believed in you`;
     let numTimes = 0;
     let timerOn = false;
+    let audio__start = new Audio('../sounds/alert.mp3');
+    let audio__end = new Audio('../sounds/alert2.mp3');
     function onload(){
+        audio__start.play();
         startBtn.disabled = true;
         numTimes++;
         let intervalID = setInterval(showTime, 1000);
@@ -22,8 +25,9 @@ function init() {
                     clockOutput.textContent = outputTime;
                     document.title = outputTime;
                     initTime--;
-                    if (initTime === 0) {
+                    if (initTime <= 0) {
                         console.log("ding");
+                        audio__end.play('../sounds/alert2.mp3');
                         clearInterval(intervalID);
                     }
                 }else{
@@ -34,8 +38,8 @@ function init() {
                     document.title = outputTime;
                     clockOutput.textContent = outputTime;
                     initTime--;
-                    if (initTime === 0) {
-                        console.log("ding");
+                    if (initTime <= 0) {
+                        audio__end.play('../sounds/alert2.mp3');
                         clearInterval(intervalID);
                     }
                 }
