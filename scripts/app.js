@@ -4,7 +4,7 @@ function init() {
     let startBtn = document.getElementById("start");
     let stopBtn = document.getElementById("stop");
     let resetBtn = document.getElementById("reset");
-    let initTime = 10; 
+    let initTime = 1500; 
     let initMsg = `I've always believed in you`;
     let numTimes = 0;
     let timerOn = false;
