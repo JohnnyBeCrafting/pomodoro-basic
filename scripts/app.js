@@ -5,7 +5,7 @@ function init() {
     let stopBtn = document.getElementById("stop");
     let resetBtn = document.getElementById("reset");
     let initTime = 1500; 
-    let initMsg = `I've always believed in you`;
+    let initMsg = `I've always believed in you!`;
     let numTimes = 0;
     let timerOn = false;
     let audio__start = new Audio('../sounds/alert.mp3');
