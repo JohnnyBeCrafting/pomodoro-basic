@@ -5,7 +5,7 @@ function init() {
     let stopBtn = document.getElementById("stop");
     let resetBtn = document.getElementById("reset");
     let initTime = 1500; 
-    let initMsg = `Work for 25 minutes, then take a break for 5 minutes`;
+    let initMsg = `Work for 25 minutes, then take a break for 5 minutes. DO ITTT`;
     let numTimes = 0;
     let timerOn = false;
     function onload(){
